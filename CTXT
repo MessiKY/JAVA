@@ -1,0 +1,97 @@
+package Kaos1;
+import java.util.Random;
+import java.util.Scanner;
+public class Test{
+	public static void main(String[] args) {
+		int m=1;
+		int a=0,b=0,c=0,d=0,e=0;
+		int x=0;
+		String p="",q="";
+		Random random = new Random();
+
+		for(int w=0;w<10000000;w++)
+		{
+			System.out.println("请输入选择：1、整数 2、真分数  3、退出程序");
+			Scanner sc = new Scanner(System.in);
+			int x1 = sc.nextInt();
+			{
+				for(int i=0;i<30;i++)
+				{
+					a = random.nextInt(100);
+					b=random.nextInt(100);
+					c=random.nextInt(4);
+					if(c==0)
+					{System.out.println(a+"+"+b+"=");}
+					if(c==1)
+					{System.out.println(a+"-"+b+"=");}
+					if(c==2)
+					{System.out.println(a+"*"+b+"=");}
+					if(c==3)
+					{
+						if(b!=0)
+						{
+							System.out.println(a+"/"+b+"=");
+						}
+						if(b==0)
+						{i--;}
+					}
+
+				}
+			}
+			if(x1==2)
+			{
+				for(int r=0;r<30;r++)
+				{
+					a = random.nextInt(100);
+					b=random.nextInt(100);
+					d = random.nextInt(100);
+					e=random.nextInt(100);
+					c=random.nextInt(4);
+					if((a>=b&&b!=0)||a==0)
+					{
+						p=a+"/"+b;
+					}
+					else
+					{
+						p=b+"/"+a;
+					}
+					if((d>=e&&e!=0)||d==0)
+					{
+						q=d+"/"+e;
+					}
+					else
+					{
+						q=e+"/"+d;
+					}
+					if(c==0)
+					{
+						System.out.println(p+"+"+q);
+					}
+					if(c==1)
+					{
+						System.out.println(p+"-"+q);
+					}
+					if(c==2)
+					{
+						System.out.println(p+"*"+q);
+					}
+					if(c==3)
+					{
+						if(d==0||e==0)
+						{
+							r--;
+						}
+						else
+						{
+							System.out.println(p+"/"+q);
+						}
+					}
+				}
+			}
+			if(x1==3)
+			{
+				break;
+				}
+		}
+	}
+}
